@@ -1,9 +1,9 @@
 from product import Product
 from productRepository import ProductRepository
 
-prod = Product('Product A', 5)
-
 repository = ProductRepository()
+
+prod = Product('Product C', 22)
 repository.create(prod)
 
 for item in repository.getall():
