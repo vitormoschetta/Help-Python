@@ -7,7 +7,7 @@ prod = Product('Product C', 22)
 repository.create(prod)
 
 for item in repository.getall():
-    print(item.name)
+    print(item.name + ' / ' + str(item.price))
     
 
 
