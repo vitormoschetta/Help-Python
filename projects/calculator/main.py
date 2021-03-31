@@ -1,30 +1,43 @@
 from operations import Operations
 
-print('Escolha a operação que deseja realizar: ')
-print('01 - Soma')
-print('02 - Subtração')
-print('03 - Multiplicação')
-print('04 - Divisão')
-
-operacao = input()
 op = Operations()
 
-if operacao == '01':
+def inputValues():
     x = input('Entre com o primeiro valor: ')
-    y = input('Entre com o segundo valor: ')
-    op.Soma(x, y)
+    y = input('Entre com o segundo valor: ') 
+    return (x, y)  
 
-if operacao == '02':
-    x = input('Entre com o primeiro valor: ')
-    y = input('Entre com o segundo valor: ')
-    op.Subtracao(x, y)
+def operationExecute(selected):
+    if selected == '01': 
+        (x, y) = inputValues()
+        op.Soma(x, y)
+    elif selected == '02':   
+        (x, y) = inputValues()  
+        op.Subtracao(x, y)
+    elif selected == '03':  
+        (x, y) = inputValues()
+        op.Multiplicacao(x, y)
+    elif selected == '04':   
+        (x, y) = inputValues()
+        op.Divisao(x, y)
+    else:
+        print('Opção inválida!')
+        inity()
 
-if operacao == '03':
-    x = input('Entre com o primeiro valor: ')
-    y = input('Entre com o segundo valor: ')
-    op.Multiplicacao(x, y)
+def operationSelect():    
+    print('Escolha a operação que deseja realizar: ')
+    print('01 - Soma')
+    print('02 - Subtração')
+    print('03 - Multiplicação')
+    print('04 - Divisão')
+    return input()    
 
-if operacao == '04':
-    x = input('Entre com o primeiro valor: ')
-    y = input('Entre com o segundo valor: ')
-    op.Divisao(x, y)
+def inity():
+    selected = operationSelect()
+    operationExecute(selected)
+
+inity()
+
+
+
+

@@ -1,20 +1,21 @@
 host = "DB:MySql"
 
-print(host[0])          #print 'D'
+print(host[0])                  #print 'D'
 
-print(len(host))        #print 8 (qtd de letras)
-
-host_list = host.split(':')
-print(host_list)        #separa a string criando uma lista ['DB', 'MySql']
+print(len(host))                #print 8 (qtd de letras)
 
 
-host02 = ':'.join(host_list)
-print(host02)           #print DB:MySql
+host_list = host.split(':')     #separa a string criando uma lista ['DB', 'MySql']
+print(host_list)                
 
 
-print('Teste\tTeste')   #tab
+host02 = ':'.join(host_list)     #print DB:MySql
+print(host02)                  
 
-print('Outro\nOutro')   #line break
+
+print('Teste\tTeste')           #tab
+
+print('Outro\nOutro')           #line break
 
 
 
