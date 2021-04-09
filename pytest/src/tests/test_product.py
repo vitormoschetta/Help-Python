@@ -11,7 +11,7 @@ def test_name_not_empty():
     separator = '. '
     assert product.is_invalid(), separator.join(product._notifications)
      
-def test_two_test():
+def test_two_functions():
     product = Product('', 0)
     separator = '. '
     assert product.is_invalid(), separator.join(product._notifications)
