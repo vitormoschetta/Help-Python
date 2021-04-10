@@ -1,4 +1,0 @@
-"""
-Módulo raiz da aplicação
-"""
-
