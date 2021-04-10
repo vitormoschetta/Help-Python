@@ -57,5 +57,13 @@ source venv/bin/activate
 <br>
 
 
+#### Virtual Env in VS Code
+```
+sudo apt install virtualenv
+```
+Na pasta do projeto executar:
+```
+virtualenv --python=python venv
+```
 
 
