@@ -48,6 +48,12 @@ Virtual Env como um container criado em cada projeto para gerenciar os pacotes u
 
 A IDE PyCharm (Gratuita) já cria esse ambiente ao criar um novo projeto Python.
 
+Se tentarmos executar um projeto python fora da _venv_ provavelmente tomaremos erro por falta de módulos instalados. Eles foram na verdade instalados na _venv_ vinculada ao projeto mas não na máquina local.
+
+Além de acessar a _venv_ através da ide PyCharm, podemos acessá-la via linha de comando:
+```
+source venv/bin/activate
+```
 <br>
 
 
