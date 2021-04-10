@@ -65,5 +65,13 @@ Na pasta do projeto executar:
 ```
 virtualenv --python=python venv
 ```
+Para entrar no modo virtual env:
+```
+source venv/bin/activate
+```
 
+<br>
+
+#### Python Package 
+Para que um determinado arquivo python seja **importável** é necessário que ele seje um Python Package, para isso basta adicionar um arquivo **__init__.py** no diretório.
 
