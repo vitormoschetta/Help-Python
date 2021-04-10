@@ -5,7 +5,7 @@ Falar aqui do que trata esse arquivo ou modulo criado
 from setuptools import find_packages, setup
 
 """
-O Setup é mais importante se for publicar esse projeto no pip (repositorio oficial python)
+O Setup é muito importante caso haja a necessidade de publicar o projeto no pip (repositorio oficial python)
 """
 setup(
     name='MyApp',
@@ -31,6 +31,7 @@ setup(
         'starlette',                        # Kit ferramentas para construção serviços assíncronos
         's3fs',                             # Serviço de comunicação S3 da AWS
         'uvicorn',                          # servidor http local
+        'uuid',
     ],
     # Os pacotes abaixo são instalados apenas para desenvolvimento
     extras_require={
