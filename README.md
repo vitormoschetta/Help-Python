@@ -40,7 +40,7 @@ Substituir o `<path>` acima pelo caminho gerado nos comandos anteriores.
 
 <br>
 
-#### Conflito de Versões de Pacotes
+#### Conflito de Versões de Pacotes - venv
 Todos os pacotes Python são instalados na máquina de desenvolvimento local. Não é possível ter versões diferentes de um mesmo pacote instalados na mesma máquina. Logo terei problema caso esteja trabalhando em projetos diferentes que implementam diferentes versões de um mesmo pacote. 
 
 Solução: `Virtual Env`
@@ -48,6 +48,12 @@ Virtual Env como um container criado em cada projeto para gerenciar os pacotes u
 
 A IDE PyCharm (Gratuita) já cria esse ambiente ao criar um novo projeto Python.
 
+Se tentarmos executar um projeto python fora da _venv_ provavelmente tomaremos erro por falta de módulos instalados. Eles foram na verdade instalados na _venv_ vinculada ao projeto mas não na máquina local.
+
+Além de acessar a _venv_ através da ide PyCharm, podemos acessá-la via linha de comando:
+```
+source venv/bin/activate
+```
 <br>
 
 
