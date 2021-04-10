@@ -19,3 +19,8 @@ def get_by_id(id):
         index += 1
 
 
+def add(item: Product):
+    _list = get_all()
+    _list.append(item)
+
+
