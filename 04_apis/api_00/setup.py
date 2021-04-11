@@ -19,7 +19,7 @@ setup(
     # Os pacotes abaixo são instalados quando for executado 'pip install setup.py'
     install_requires=[
         'fastapi',                          # Framework para construir APIs
-        'uvicorn',                          # servidor http local
-        'pydantic',
+        'uvicorn',                          # Servidor http local
+        'pydantic',                         # Serve para mapear objetos nos requests?
     ]
 )
