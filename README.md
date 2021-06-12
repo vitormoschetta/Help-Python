@@ -41,6 +41,7 @@ Substituir o `<path>` acima pelo caminho gerado nos comandos anteriores.
 <br>
 
 #### Conflito de Versões de Pacotes - venv
+
 Todos os pacotes Python são instalados na máquina de desenvolvimento local. Não é possível ter versões diferentes de um mesmo pacote instalados na mesma máquina. Logo terei problema caso esteja trabalhando em projetos diferentes que implementam diferentes versões de um mesmo pacote. 
 
 Solução: `Virtual Env`
@@ -79,4 +80,5 @@ Para que um determinado arquivo python seja **importável** é necessário que e
 
 
 #### Python Singleton
+
 A melhor e mais simples maneira de assegurar única instância de um determinado módulo é não usando classes. Módulos com propriedades e métodos apenas. 

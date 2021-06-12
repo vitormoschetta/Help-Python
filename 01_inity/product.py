@@ -1,18 +1,17 @@
 class Product:
-    def __init__(self, id, name):
-        self.id = id
+    def __init__(self, cod, name):
+        self.cod = cod
         self.name = name
-                      
 
 
 lista = []
-prodA = {'id': '01', 'name': 'prod A'}
-prodB = {'id': '02', 'name': 'prod B'}
-prodC = Product('03', 'prod C')
 
-lista.append(prodA)
-lista.append(prodB)
-lista.append(prodC)
+for i in [0, 1, 2, 3, 4]:
+    prod = Product(i, 'prod'+str(i))
+    lista.append(prod)
 
-print(lista[1].id)
+i = 0
+while i < len(lista):
+    print(lista[i].name)
+    i = i + 1
 
