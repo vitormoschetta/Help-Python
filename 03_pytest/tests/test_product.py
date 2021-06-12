@@ -1,5 +1,5 @@
 import pytest
-from src.models.product import Product
+from models.product import Product
 
 def test_price_is_greater_than_zero():
     product = Product('Product A', 0)

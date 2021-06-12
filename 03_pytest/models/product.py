@@ -1,5 +1,5 @@
 import uuid
-from src.models.notifiable import Notifiable
+from models.notifiable import Notifiable
 
 class  Product(Notifiable):
     def __init__(self, name, price):

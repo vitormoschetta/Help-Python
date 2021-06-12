@@ -3,6 +3,12 @@
 <https://docs.pytest.org/en/stable/getting-started.html>
 
 
+## Executar os testes:
+```
+pytest
+```
+
+
 ## Algumas observações
 
 - Os arquivos de teste precisam ter o prefixo 'test':
