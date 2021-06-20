@@ -5,7 +5,7 @@ def process():
     while True:        
         print("\n******* Escolha uma opção abaixo: *******")
 
-        option = int(input("(1) Criar conta (2) Depositar (3) Sacar (4) Extrato (5) Sair \n"))
+        option = int(input("(1) Criar conta (2) Depositar (3) Sacar (4) Extrato (5) Bagunçar (6) Sair \n"))
 
         if (option == 1):
             number = input("Informe o número da conta:")
@@ -29,9 +29,16 @@ def process():
             print("Saldo atualizado: {}".format(account["balance"])) 
 
         elif (option == 4):            
-            print("Saldo atualizado: {}".format(account["balance"])) 
+            statement(account)
 
-        elif (option == 5):
+        elif (option == 5):            
+            account["balance"] = 0
+            print("Atualizei o saldo da conta sem passar pela função kkkk.")
+            print("Programação procedural tem essas aberturas...")
+            statement(account)
+            
+
+        elif (option == 6):
             exit()
 
         else:

@@ -9,4 +9,4 @@ def withdraw_amount(account, amount):
     account["balance"] -= amount
 
 def statement(account):
-    print("Saldo é {}".format(account["balance"]))
+    print("Saldo atualizado é {:.2f}".format(account["balance"]))
