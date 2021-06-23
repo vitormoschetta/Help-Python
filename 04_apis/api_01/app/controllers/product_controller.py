@@ -27,9 +27,9 @@ def add(item: ProductCreate):
 def update(id: str, item: ProductUpdate):
     if id != item.id:
         return 'Id inválido!'
-    handler.update(item)
+    return handler.update(item)
 
 
 @PRODUCT_CONTROLLER.delete("/products/{id}")
-def update(id: str):
-    handler.delete(id)
+def delete(id: str):
+    return handler.delete(id)

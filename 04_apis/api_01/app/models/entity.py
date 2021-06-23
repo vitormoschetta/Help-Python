@@ -5,6 +5,7 @@ from app.models.notifiable import Notifiable
 class Entity(Notifiable):
 
     def __init__(self, id):
+        super(Entity, self).__init__()
         if not id:
             self.__id = uuid.uuid4()
         else:

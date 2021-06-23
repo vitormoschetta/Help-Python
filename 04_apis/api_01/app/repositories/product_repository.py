@@ -27,7 +27,7 @@ def update(item: Product):
     for product in product_list:
         if product.id == item.id:
             product.update(item.name, item.price)
-            return
+            return product
 
 
 def delete(id: str):

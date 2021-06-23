@@ -4,6 +4,7 @@ from app.requests.product_update import ProductUpdate
 from app.responses.product_response import ProductResponse
 from app.responses.generic_response import GenericResponse
 import app.repositories.product_repository as repository
+import app.helpers.concatenate_list as concatenate
 import uuid
 
 
@@ -24,13 +25,26 @@ def get(id: str):
 
 def add(item: ProductCreate):
     product = Product(uuid.uuid4(), item.name, item.price, item.active)
+    if product.is_invalid:
+        return GenericResponse(False, concatenate.execute(product.notifications))
     repository.add(product)
     return GenericResponse(True, 'Cadastrado com sucesso!')
 
 
 def update(item: ProductUpdate):
+    product = repository.get_by_id(item.id)
+    if not product:
+        return GenericResponse(False, 'Produto não encontrado!')
+    product.update(item.name, item.price)
+    if product.is_invalid:
+        return GenericResponse(False, concatenate.execute(product.notifications))
     repository.update(item)
+    return GenericResponse(True, 'Atualizado com sucesso!')
 
 
 def delete(id: str):
+    product = repository.get_by_id(id)
+    if not product:
+        return GenericResponse(False, 'Produto não encontrado!')
     repository.delete(id)
+    return GenericResponse(True, 'Excluído com sucesso!')

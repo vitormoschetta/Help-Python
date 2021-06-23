@@ -24,6 +24,7 @@ class Product(Entity):
     def update(self, name, price):
         self.__name = name
         self.__price = price
+        self.validate()
 
     def validate(self):
         if len(self.name) < 5:
