@@ -2,6 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from app.controllers.product_controller import PRODUCT_CONTROLLER
 
+
 app = FastAPI(
     version='0.1.0',
     title='Training API',

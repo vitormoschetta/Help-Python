@@ -1,7 +1,6 @@
-from pydantic import BaseModel
+class ProductResponse:
+    def __init__(self, id, name, price):
+        self.id = id
+        self.name = name
+        self.price = price
 
-
-class ProductResponse(BaseModel):
-    id: int
-    name: str
-    price: float

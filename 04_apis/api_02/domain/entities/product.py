@@ -1,10 +1,10 @@
 import uuid
-from domain.entities.notifiable import Notifiable
+from domain.entities.entity import Entity
 
 
-class Product(Notifiable):
+class Product(Entity):
     def __init__(self, name, price, active=True):
-        self.id = uuid.uuid4()
+        super(Product, self).__init__()
         self.name = name
         self.price = price
         self.active = active

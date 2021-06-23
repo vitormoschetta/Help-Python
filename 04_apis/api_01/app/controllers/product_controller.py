@@ -1,41 +1,35 @@
 from fastapi import APIRouter
-from app.models.product import Product
 from app.requests.product_create import ProductCreate
 from app.requests.product_update import ProductUpdate
-from app.responses.product_response import ProductResponse
-import app.repositories.product_repository as repository
+import app.handlers.product_handler as handler
+
 
 PRODUCT_CONTROLLER = APIRouter()
 
 
-@PRODUCT_CONTROLLER.get("/load")
-def load():
-    repository.load()
-
-
 @PRODUCT_CONTROLLER.get("/products")
 def get_all():
-    return repository.get_all()
+    items = handler.get_all()
+    return items
 
 
 @PRODUCT_CONTROLLER.get("/products/{id}")
-def get_id(id: int):
-    return repository.get_by_id(id)
+def get_id(id: str):
+    return handler.get(id)
 
 
 @PRODUCT_CONTROLLER.post("/products")
 def add(item: ProductCreate):
-    product = Product(item.name, item.price, item.active)
-    repository.add(product)
+    return handler.add(item)
 
 
 @PRODUCT_CONTROLLER.put("/products/{id}")
 def update(id: str, item: ProductUpdate):
     if id != item.id:
         return 'Id inválido!'
-    repository.update(item)
+    handler.update(item)
 
 
 @PRODUCT_CONTROLLER.delete("/products/{id}")
 def update(id: str):
-    repository.delete(id)
+    handler.delete(id)

@@ -1,14 +1,14 @@
 class Notifiable:
-    _notifications = []
+    notifications = []
+
+    def __init__(self):
+        self.notifications = []
 
     def add_notification(self, message):
-        self._notifications.append(message)
+        self.notifications.append(message)
 
-    def is_valid(self):
-        if len(self._notifications) > 0:
-            return False
-        else:
-            return True
+    def is_valid(self) -> bool:
+        return any(self.notifications)
 
-    def is_invalid(self):
-        return not self.is_valid()
+    def is_invalid(self) -> bool:
+        return not self.is_valid
