@@ -1,4 +1,3 @@
-from os import truncate
 from account import account_create, deposit_amount, withdraw_amount, statement
 
 def process():
