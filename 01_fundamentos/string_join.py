@@ -1,13 +1,3 @@
-############ Usando tipos primitivos:
-
-lista = ['a', 'b', 'c', 'd']
-
-separetor = ' ; '
-
-print(separetor.join(lista))
-
-
-
 
 ############ Usando objetos:
 class Product:
