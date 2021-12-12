@@ -81,3 +81,19 @@ while True:
     if indice >= len(texto):
         break
 
+
+
+print('\n')
+
+
+# Uma outra forma de percorrer listas de tipos primitivos:
+
+listaA = ['a', 'b', 'c', 'd', 'e']
+
+print(listaA[0])        # print do primeiro elemento
+
+print(listaA[0:])       # print de todos os elementos
+
+print(listaA[1:])       # print do segundo elemento até o final
+
+print(listaA[:-1])      # print primeiro elemento até um antes do final
