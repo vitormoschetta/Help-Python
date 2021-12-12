@@ -1,4 +1,4 @@
-def execute(notifications: []):
+def build(notifications: []):
     text = ''
     for item in notifications:
         text += item + ' | '

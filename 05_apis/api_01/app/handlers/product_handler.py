@@ -26,7 +26,7 @@ def get(id: str):
 def add(item: ProductCreate):
     product = Product(uuid.uuid4(), item.name, item.price, item.active)
     if product.is_invalid:
-        return GenericResponse(False, concatenate.execute(product.notifications))
+        return GenericResponse(False, concatenate.build(product.notifications))
     repository.add(product)
     return GenericResponse(True, 'Cadastrado com sucesso!')
 
@@ -37,7 +37,7 @@ def update(item: ProductUpdate):
         return GenericResponse(False, 'Produto não encontrado!')
     product.update(item.name, item.price)
     if product.is_invalid:
-        return GenericResponse(False, concatenate.execute(product.notifications))
+        return GenericResponse(False, concatenate.build(product.notifications))
     repository.update(item)
     return GenericResponse(True, 'Atualizado com sucesso!')
 
