@@ -25,3 +25,8 @@ virtualenv --python=python3.8 venv
 ```
 source venv/bin/activate
 ```
+
+##### Sair do virtualenv:
+``` 
+deactivate
+```
