@@ -5,14 +5,8 @@
 Imprime a versão _setada_ como _default_:
 ```
 python -V
-``` 
-
-Podem existir outras versões instaladas:
-```
-python3.6 -V
-``` 
-```
-python3.7 -V
+ou
+python3 -V
 ``` 
 
 <br>
