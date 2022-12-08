@@ -23,7 +23,7 @@ A saída disso seria algo como:
 
 Diretório de outras versões:
 ```
-which python3.7
+which python3
 ``` 
 
 Saber pra onde a versão _default_ está apontando, em termos de _path_:
